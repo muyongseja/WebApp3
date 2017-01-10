@@ -3,9 +3,24 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
-	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping" />
 	
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/first.spr1">first</prop>
+				<prop key="/second.spr1">second</prop>
+				<prop key="/third.spr1">third</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="first" class="myweb.controller.MessageController" />
+	<bean id="second" class="myweb.controller.SecondController" />
+	<bean id="third" class="myweb.controller.ThirdController" />
+	
+	<!-- 
 	<bean name="/first.spr1" class="myweb.controller.MessageController" />
 	<bean name="/second.spr1" class="myweb.controller.SecondController" />
 	<bean name="/third.spr1" class="myweb.controller.ThirdController" />
+	-->
 </beans>
