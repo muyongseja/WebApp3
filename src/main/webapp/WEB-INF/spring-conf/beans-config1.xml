@@ -2,6 +2,10 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-
+	<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping" />
+	
+	<bean name="/first.spr1" class="myweb.controller.MessageController" />
+	<bean name="/second.spr1" class="myweb.controller.SecondController" />
+	<bean name="/third.spr1" class="myweb.controller.ThirdController" />
 </beans>
