@@ -5,15 +5,29 @@
 <web-app>
   <display-name>Archetype Created Web Aplication</display-name>
   
-  <!-- applicationContext.xml -->
-  <listener>
-  	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-  </listener>
-  
   <context-param>
   	<param-name>contextConfigLocation</param-name>
   	<param-value>/WEB-INF/spring-conf/root.xml</param-value>
   </context-param>
+  
+  <filter>
+  	<filter-name>filterEncoding</filter-name>
+  	<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+  	<init-param>
+  		<param-name>encoding</param-name>
+  		<param-value>euc-kr</param-value>
+  	</init-param>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>filterEncoding</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <!-- applicationContext.xml -->
+  <listener>
+  	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
   
   <servlet>
   	<servlet-name>web3</servlet-name>
