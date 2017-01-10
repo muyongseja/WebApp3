@@ -19,9 +19,11 @@
 		</property>
 	</bean>
 	
+	<!--  
 	<bean id="first" class="myweb.controller.MessageController" />
 	<bean id="second" class="myweb.controller.SecondController" />
 	<bean id="third" class="myweb.controller.ThirdController" />
+	-->
 	
 	<!-- 
 	<bean name="/first.spr1" class="myweb.controller.MessageController" />
