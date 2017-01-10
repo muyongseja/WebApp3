@@ -5,6 +5,16 @@
 <web-app>
   <display-name>Archetype Created Web Aplication</display-name>
   
+  <!-- applicationContext.xml -->
+  <listener>
+  	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  
+  <context-param>
+  	<param-name>contextConfigLocation</param-name>
+  	<param-value>/WEB-INF/spring-conf/root.xml</param-value>
+  </context-param>
+  
   <servlet>
   	<servlet-name>web3</servlet-name>
   	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
