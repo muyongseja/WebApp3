@@ -13,7 +13,7 @@ public class ThirdController {
 	@RequestMapping("/third.spr1")
 	protected ModelAndView handleRequestInternal(HttpServletRequest arg0, HttpServletResponse arg1) throws Exception {
 		ModelAndView mv = 
-			new ModelAndView("result.jsp");
+			new ModelAndView("result");
 		mv.addObject("msg", "세번째 요청입니다.");
 		return mv;
 	}
