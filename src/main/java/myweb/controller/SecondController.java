@@ -13,7 +13,7 @@ public class SecondController {
 	@RequestMapping("/second.spr1")
 	protected ModelAndView handleRequestInternal(HttpServletRequest arg0, HttpServletResponse arg1) throws Exception {
 		ModelAndView mv = 
-			new ModelAndView("/WEB-INF/views/result.jsp");
+			new ModelAndView("result.jsp");
 		mv.addObject("msg", "두번째 요청입니다.");
 		return mv;
 	}
